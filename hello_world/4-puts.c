@@ -1,9 +1,7 @@
 #include <stdio.h>
 /**
-* This is my first C program
-* it prints the message: "Programming is like building a multilingual puzzle
-* main - entry point
-* return: always 0 (succes)
+* main - Entry point
+* Return: Always 0 (Success)
 */
 int main(void)
 {
