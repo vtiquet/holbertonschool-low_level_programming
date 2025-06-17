@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* _islower - prints the alphabet 10 timescheck if the character is in lowercase
+* _islower - check if the character is lowercase
 * @c: represent a unsigned charactere
 * Return: 1 if character is lowercase, 0 otherwise.
 */
