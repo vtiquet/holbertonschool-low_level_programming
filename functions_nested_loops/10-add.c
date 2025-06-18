@@ -6,4 +6,6 @@
 * Return: show the result.
 */
 int add(int a, int b)
+{
 return(a + b)
+}
