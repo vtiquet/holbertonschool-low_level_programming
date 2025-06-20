@@ -5,9 +5,9 @@
 */
 int main(void)
 {
-int num;
-for (num = 0; num < 10; num++)
-printf("%d", num);
+int n;
+for (n = 0; n < 10; n++)
+printf(n);
 printf("\n");
 return (0);
 }
