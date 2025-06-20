@@ -5,9 +5,9 @@
 */
 int main(void)
 {
-char letter;
-for (letter = 'z'; letter >= 'a'; letter--)
-putchar(letter);
+char l;
+for (l = 'z'; l >= 'a'; l--)
+putchar(l);
 putchar('\n');
 return (0);
 }
