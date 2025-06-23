@@ -8,7 +8,7 @@ int i = 0, n;
 while (i < 10)
 {
 for (n = 0; n <= 14; n++)
-_putchar(n);
+_putchar((num % 10) + '0')
 _putchar('\n');
 i++;
 }
