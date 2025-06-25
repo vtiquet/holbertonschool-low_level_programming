@@ -1,28 +1,22 @@
 #include "main.h"
 /**
-* _atoi - function that convert a string to an integer.
-* @s: the string.
-* Return: The integer value of the string, or 0 if no numbers are present
+* *_strcat - a function that concatenates two strings.
+* @dest: a string.
+* @src: another string.
+* Return: the result of the dest string
 */
-int _atoi(char *s)
+char *_strcat(char *dest, char *src)
 {
-int i = 0, sign = 1;
-unsigned int n = 0;
-while (s[i] != '\0')
+int i = 0, l = 0;
+while (dest[i] != '\0')
 {
-if (s[i] == '-')
-{
-sign *= -1;
-}
-else if (s[i] >= '0' && s[i] <= '9')
-{
-n = (n * 10) + (s[i] - '0');
-}
-else if (n > 0)
-{
-break;
-}
+l++;
 i++;
 }
-return (sign *n);
+for (i = 0; src[i] != '\0'; i++)
+{
+dest[l] = src[i];
+l++;
+}
+return (dest);
 }
