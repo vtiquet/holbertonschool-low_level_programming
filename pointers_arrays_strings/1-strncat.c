@@ -3,6 +3,7 @@
 * *_strcat - a function that concatenates two strings.
 * @dest: a string.
 * @src: another string.
+* @n: number of bytres to be printed form src
 * Return: the result of the dest string
 */
 char *_strncat(char *dest, char *src, int n)
