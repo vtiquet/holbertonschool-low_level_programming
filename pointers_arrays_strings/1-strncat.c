@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* *_strcat - a function that concatenates two strings.
+* *_strncat - a function that concatenates two strings for n bytes.
 * @dest: a string.
 * @src: another string.
 * @n: number of bytres to be printed form src
