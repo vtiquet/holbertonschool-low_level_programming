@@ -1,9 +1,9 @@
 #include "main.h"
 /**
-* _strncpy - a function that compares two strings
+* _strcmp - a function that compares two strings
 * @s1: the 1st string.
 * @s2: the 2nd string.
-* Return: "0" if s2 = s1; "-" if s2 > s1; "+" if s2 < s1.
+* Return: "0" if s2 = s1, "-" if s2 > s1, "+" if s2 < s1.
 */
 int _strcmp(char *s1, char *s2)
 {
