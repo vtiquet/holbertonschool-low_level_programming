@@ -1,14 +1,13 @@
 #include "main.h"
 /**
-* _strspn -  a function that locates a character in a string.
+* _strpbrk -  a function that searches a string for any of a set of bytes
 * @s: the string.
 * @accept: another string.
 * Return: the number of bytes.
 */
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
 	int i1 = 0, i2;
-	unsigned int l = 0;
 
 	while (s[i1] != '\0')
 	{
@@ -16,15 +15,10 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (s[i1] == accept[i2])
 			{
-				l++;
-				break;
-			}
-			else if (accept[i2 + 1] == '\0')
-			{
-				return (l);
+				return (s + i1);
 			}
 		}
 		i1++;
 	}
-	return (l);
+	return ('\0');
 }
