@@ -1,22 +1,22 @@
 #include "main.h"
 /**
- * check_prime - Helper function to recursively check for primality.
- * @n: the number.
- * @y: the denominator.
- * Return: 1 if n is prime, 0 otherwise.
- */
+* check_prime - Helper function to recursively check for primality.
+* @n: the number.
+* @y: the denominator.
+* Return: 1 if n is prime, 0 otherwise.
+*/
 int check_prime(int n, int y)
 {
-    if (y * y > n)
-    {
-        return (1);
-    }
-    if (n % y == 0)
-    {
-        return (0);
-    }
+	if (y * y > n)
+	{
+		return (1);
+	}
+	if (n % y == 0)
+	{
+		return (0);
+	}
 
-    return (check_prime(n, y + 2));
+	return (check_prime(n, y + 2));
 }
 /**
 * is_prime_number -  a function that returns 1 if the input
