@@ -22,8 +22,6 @@ int main(int argc, char *argv[])
 					printf("Error\n");
 					return (1);
 				}
-			}
-			{
 				n1 = atoi(argv[i1]);
 				n2 = n2 + n1;
 			}
