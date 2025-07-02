@@ -8,21 +8,16 @@
 */
 int main(int argc, char *argv[])
 {
-	int i, n1, n2 = 1;
+	int n1, n2, result;
 
-	if (argc > 1)
-	{
-		for (i = 1; i < argc; i++)
-		{
-			n1 = atoi(argv[i]);
-			n2 = n2 * n1;
-		}
-		printf("%d\n", n2);
-		return (0);
-	}
-	else
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	n1 = atoi(argv[1]);
+	n2 = atoi(argv[2]);
+	result = n1 * n2;
+	printf("%d\n", result);
+	return (0);
 }
