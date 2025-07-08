@@ -2,48 +2,24 @@
 #include <stdlib.h>
 
 /**
- * malloc_checked - a function that allocates memory using malloc.
- * @s1: the 1st string.
- * @s2: the 2nd string.
- * @n: the number of bytes to be concatened.
+ * _calloc - a function that allocates memory for an array, using malloc.
+ * @nmemb: the number of elements in the array.
+ * @size: the size of each element in bytes.
  * Return: A pointer to the allocated memory.
- * If malloc fails, the function causes normal process termination
- * with a status value of NULL.
+ * Returns NULL if nmemb or size is 0, or if malloc fails.
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *a;
-	unsigned int ltot, ls1 = 0, ls2 = 0, i;
+	unsigned int tots, i;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-	while (s1[ls1] != '\0')
-	{
-		ls1++;
-	}
-	while (s2[ls2] != '\0')
-	{
-		ls2++;
-	}
-	if (n >= ls2)
-		ltot = ls1 + ls2 +1;
-	else
-		ltot = ls1 + n +1;
-	a = malloc(ltot * sizeof(char));
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	tots = nmemb * size;
+	a = malloc(tots);
 	if (a == NULL)
-	{
-		return(NULL);
-	}
-	for (i = 0; i < ls1; i++)
-	{
-		a[i] = s1[i];
-	}
-	for (i = 0; i < n; i++)
-	{
-		a[ls1 + i] = s2[i];
-	}
-	a[ls1 + i] = '\0';
+		return (NULL);
+	for (i = 0; i < tots; i++)
+		a[i] = 0;
 	return (a);
 }
