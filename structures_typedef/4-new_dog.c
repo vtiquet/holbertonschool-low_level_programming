@@ -39,6 +39,7 @@ char *_strcpy(char *dest, char *src)
  * @name: The dog's name.
  * @age: The dog's age.
  * @owner: The owner's name.
+ * Return: NULL if the function fails or the new dog.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
