@@ -42,13 +42,15 @@ char *_strcpy(char *dest, char *src)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	int i;
 	if (new_dog == NULL)
 	{
 		return;
 	}
-
-
-	printf("Name: %s\n", ((*d).name != NULL) ? (*d).name : "(nil)");
-	printf("Age: %f\n", (*d).age);
-	printf("Owner: %s\n", ((*d).owner != NULL) ? (*d).owner : "(nil)");
+	a = malloc((_strlen(name) + _strcpy(owner)) * sizeof(char) + 1);
+	if (a == NULL)
+	{
+		return (NULL);
+	}
+	
 }

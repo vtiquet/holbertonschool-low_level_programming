@@ -25,15 +25,14 @@ int _strlen(char *s)
 char *_strdup(char *str)
 {
 	char *a;
-	unsigned int i, l;
+	unsigned int i;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	l = _strlen(str) + 1;
-	a = malloc(l * sizeof(char));
-	for (i = 0; i < l; i++)
+	a = malloc(_strlen(str) * sizeof(char) + 1);
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		a[i] = str[i];
 	}

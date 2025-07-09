@@ -66,14 +66,12 @@ char *_strcat(char *dest, char *src)
 char *str_concat(char *s1, char *s2)
 {
 	char *a;
-	unsigned int l;
 
 	if (s1 == NULL && s2 == NULL)
 	{
 		return (NULL);
 	}
-	l = _strlen(s1) + _strlen(s2) + 1;
-	a = malloc(l * sizeof(char));
+	a = malloc((_strlen(s1) + _strlen(s2)) * sizeof(char) + 1);
 	if (a == NULL)
 	{
 		return (NULL);
