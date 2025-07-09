@@ -67,10 +67,10 @@ char *str_concat(char *s1, char *s2)
 {
 	char *a;
 
-	if (s1 == NULL && s2 == NULL)
-	{
-		return (NULL);
-	}
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	a = malloc((_strlen(s1) + _strlen(s2)) * sizeof(char) + 1);
 	if (a == NULL)
 	{
