@@ -43,14 +43,16 @@ char *_strcpy(char *dest, char *src)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	int i;
+
 	if (new_dog == NULL)
 	{
 		return;
 	}
-	a = malloc((_strlen(name) + _strcpy(owner)) * sizeof(char) + 1);
+
+
 	if (a == NULL)
 	{
 		return (NULL);
 	}
-	
+
 }
