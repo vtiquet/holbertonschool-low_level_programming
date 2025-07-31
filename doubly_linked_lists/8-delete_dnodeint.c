@@ -3,7 +3,7 @@
 /**
  * delete_dnodeint_at_index - a function that deletes
  * the node at index of a linked list.
- * @h: a pointer to the head of the dlistint_t list.
+ * @head: a pointer to the head of the dlistint_t list.
  * @index: is the index of the list where the new node should be added.
  * Return: 1 if it succeeded, -1 if it failed.
  */
