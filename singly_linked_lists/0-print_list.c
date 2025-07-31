@@ -2,7 +2,7 @@
 /**
 * print_list - a function that prints all the elements of a list.
 * @h: pointer with list informations.
-* Return: the number of nodes in the list, 0 if h == 0.
+* Return: the number of nodes in the list.
 */
 size_t print_list(const list_t *h)
 {
