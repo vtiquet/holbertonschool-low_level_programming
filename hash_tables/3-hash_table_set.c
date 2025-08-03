@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
-	i = key_i((const unsigned char *)key, (*ht).size);
+	i = key_index((const unsigned char *)key, (*ht).size);
 	actual = (*ht).array[i];
 	while (actual != NULL)
 	{
