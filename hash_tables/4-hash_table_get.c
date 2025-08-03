@@ -7,18 +7,18 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-    unsigned long int i;
-    hash_node_t *actual;
+	unsigned long int i;
+	hash_node_t *actual;
 
-    if (ht == NULL || key == NULL || *key == '\0')
-        return (NULL);
-    i = key_i((const unsigned char *)key, (*ht).size);
-    actual = (*ht).array[i];
-    while (actual != NULL)
-    {
-        if (strcmp((*actual).key, key) == 0)
-            return ((*actual).value);
-        actual = (*actual).next;
-    }
-    return (NULL);
+	if (ht == NULL || key == NULL || *key == '\0')
+		return (NULL);
+	i = key_index((const unsigned char *)key, (*ht).size);
+	actual = (*ht).array[i];
+	while (actual != NULL)
+	{
+		if (strcmp((*actual).key, key) == 0)
+			return ((*actual).value);
+		actual = (*actual).next;
+	}
+	return (NULL);
 }
