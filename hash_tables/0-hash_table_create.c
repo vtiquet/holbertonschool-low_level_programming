@@ -21,7 +21,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		free(ht);
 		return (NULL);
 	}
-	while ( i < size)
+	while (i < size)
 	{
 		(*ht).array[i] = NULL;
 		i++;
