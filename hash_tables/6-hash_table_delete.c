@@ -5,24 +5,32 @@
  */
 void hash_table_delete(hash_table_t *ht)
 {
-	unsigned long int i;
-	hash_node_t *actual, *tmp;
+	unsigned long int i = 0;
+	hash_node_t *next_node = NULL, *node = NULL;
 
-	if (ht == NULL)
+	if (!ht)
 		return;
-
-	for (i = 0; i < (*ht).size; i++)
+	if ((*ht).array)
 	{
-		actual = (*ht).array[i];
-		while (actual != NULL)
+		while (i < (*ht).size)
 		{
-			tmp = actual;
-			actual = (*actual).next;
-			free((*tmp).key);
-			free((*tmp).value);
-			free(tmp);
+			if ((*ht).array[i])
+			{
+				node = (*ht).array[i];
+				while (node)
+				{
+					next_node = (*node).next;
+					if ((*node).value)
+						free((*node).value);
+					if ((*node).key)
+						free((*node).key);
+					free(node);
+					node = next_node;
+				}
+			}
+			i++;
 		}
+		free((*ht).array);
 	}
-	free((*ht).array);
 	free(ht);
 }
