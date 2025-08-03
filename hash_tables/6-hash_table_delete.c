@@ -34,3 +34,19 @@ void hash_table_delete(hash_table_t *ht)
 	}
 	free(ht);
 }
+/**
+ * main - check the code for
+ * Return: Always EXIT_SUCCESS.
+ */
+int main(void)
+{
+    hash_table_t *ht;
+
+    ht = hash_table_create(1024);
+    printf("%p\n", (void *)ht);
+    if (ht != NULL)
+    {
+        hash_table_delete(ht);
+    }
+    return (EXIT_SUCCESS);
+}
