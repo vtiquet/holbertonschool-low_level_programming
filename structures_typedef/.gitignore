@@ -1,1 +1,8 @@
-*~
+# Ignore everything
+*
+# But not these file types:
+!*.c
+!*.h
+!*.md
+# Ignore all main.c files explicitly
+*main.c
